@@ -19,13 +19,14 @@ const Navbar = () => {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed w-full z-50 bg-[#000]/80 backdrop-blur-md border-b border-[#000000]"
+      className="fixed w-full z-50 bg-gradient-to-b from-[#111111] to-[#23272e] backdrop-blur-lg border-b border-[#23272e]/80 shadow-lg"
+      style={{ boxShadow: '0 4px 24px 0 rgba(0,0,0,0.10)' }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
-          <motion.div whileHover={{ scale: 1.05 }}>
-            <Link to="/" className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#0055FF] to-[#00F0FF]">
+          <motion.div whileHover={{ scale: 1.08, rotate: 2 }} transition={{ type: 'spring', stiffness: 300 }}>
+            <Link to="/" className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#0055FF] to-[#00F0FF] drop-shadow-lg hover:drop-shadow-xl transition duration-200">
               YL
             </Link>
           </motion.div>
@@ -40,7 +41,7 @@ const Navbar = () => {
               >
                 <Link
                   to={link.path}
-                  className="px-4 py-2 text-[#f5f5f5] hover:text-[#00F0FF] text-sm font-medium"
+                  className="px-4 py-2 text-[#f5f5f5] hover:text-[#00F0FF] text-sm font-medium transition-colors duration-200"
                 >
                   {link.name}
                 </Link>
@@ -73,7 +74,7 @@ const Navbar = () => {
           opacity: mobileOpen ? 1 : 0,
           height: mobileOpen ? 'auto' : 0
         }}
-        className="md:hidden overflow-hidden bg-[#111111] border-t border-[#333333]"
+        className="md:hidden overflow-hidden bg-gradient-to-b from-[#111111] to-[#23272e] border-t border-[#23272e]/80 shadow-lg"
       >
         <div className="px-2 pt-2 pb-3 space-y-1">
           {navLinks.map((link) => (
@@ -84,7 +85,7 @@ const Navbar = () => {
               <Link
                 to={link.path}
                 onClick={() => setMobileOpen(false)}
-                className="block px-3 py-2 rounded-md text-base font-medium text-[#f5f5f5] hover:text-[#00F0FF] hover:bg-[#333333]"
+                className="block px-3 py-2 rounded-md text-base font-medium text-[#f5f5f5] hover:text-[#00F0FF] hover:bg-[#333333]/60 transition-colors duration-200"
               >
                 {link.name}
               </Link>

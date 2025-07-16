@@ -60,7 +60,7 @@ const News = () => {
   return (
     <PageWrapper>
       
-       <section className="min-h-screen flex items-center justify-center bg-fm-dark text-white pt-16 pb-24  overflow-hidden">
+       <section className="min-h-screen flex items-center justify-center bg-fm-dark text-white pb-24  overflow-hidden">
 
         <motion.div
           initial={{ scale: 0.5, opacity: 0 }}

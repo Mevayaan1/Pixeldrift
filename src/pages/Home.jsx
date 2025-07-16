@@ -88,7 +88,7 @@ export default function Home() {
   return (
     <PageWrapper>
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center bg-fm-dark text-white pt-16 relative overflow-hidden">
+      <section className="min-h-screen flex items-center pt-16 justify-center bg-fm-dark text-white relative overflow-hidden">
         {/* Animated background elements */}
         <motion.div 
           initial={{ scale: 0.8, opacity: 0 }}
