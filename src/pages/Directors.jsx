@@ -160,7 +160,7 @@ const Directors = () => {
           
         }}
         animate={{
-            height : "60vh",    
+            height : "80vh",    
         }}
     transition={{
     
